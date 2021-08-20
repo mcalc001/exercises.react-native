@@ -1,4 +1,4 @@
-# React Navigation Exercises
+# React Native Exercises
 
 To be built. General concept:
 

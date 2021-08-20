@@ -1,6 +1,7 @@
 package com.exercisesreactnative;
 
 import com.facebook.react.ReactActivity;
+import android.os.Bundle;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +12,11 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "ExercisesReactNative";
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    // https://reactnavigation.org/docs/getting-started
+    super.onCreate(null);
   }
 }

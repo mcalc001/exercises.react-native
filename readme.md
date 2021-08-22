@@ -8,7 +8,7 @@ The exercise you'll be embarking on will implement a feature of the app.
 
 We'll explain what that is soon, but first we'll help you get your bearings by giving you a brief overview of the architecture of the application.
 
-> **Note:**  you're about to be given a top level overview of the app structure as a whole. To give you a bit of context as to the scope of the exercise, the only files you'll be expected to work with is in the **fixtures** module. The specifics of this will follow.
+> **Note:**  you're about to be given a top level overview of the app structure as a whole. To give you a bit of context as to the scope of the exercise, the only file you'll be expected to work with is in the **fixtures** module. The specifics of this will follow.
 
 ## App architecture
 

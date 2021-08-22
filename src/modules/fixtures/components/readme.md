@@ -1,0 +1,1 @@
+The directory which components specific to the "fixture" module reside.

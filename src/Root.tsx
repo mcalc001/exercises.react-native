@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import FixturesScreen from './modules/fixtures/FixturesScreen';
-import HomeScreen from './modules/home/HomeScreen';
-import ProfileScreen from './modules/profile/ProfileScreen';
-import StoreScreen from './modules/store/StoreScreen';
+import FixturesScreen from './modules/fixtures/screens/FixturesScreen';
+import HomeScreen from './modules/home/screens/HomeScreen';
+import ProfileScreen from './modules/profile/screens/ProfileScreen';
+import ShopScreen from './modules/shop/screens/ShopScreen';
 
 type RootParamList = {
   Home: undefined;
@@ -27,7 +27,7 @@ export default () => {
         options={{ title: 'Fixtures' }}
         component={FixturesScreen}
       />
-      <Tab.Screen name="Store" component={StoreScreen} />
+      <Tab.Screen name="Store" component={ShopScreen} />
       <Tab.Screen
         name="Profile"
         options={{ title: 'Profile' }}

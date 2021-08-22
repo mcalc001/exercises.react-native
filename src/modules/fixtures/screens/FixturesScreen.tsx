@@ -5,7 +5,7 @@ import { useStateSelector, useThunkDispatch } from '../../../core/redux/hooks';
 import { getFixturesAsync } from '../thunks';
 
 export default () => {
-  const loading = useStateSelector(u => u.fixtures.fixturesLoading);
+  const fixturesLoading = useStateSelector(u => u.fixtures.fixturesLoading);
   const fixtures = useStateSelector(u => u.fixtures);
   const dispatch = useThunkDispatch();
 
@@ -15,7 +15,7 @@ export default () => {
     dispatch(getFixturesAsync());
   }, [dispatch]);
 
-  console.log('loading', loading);
+  console.log('loading', fixturesLoading);
   console.log('fixtures', fixtures);
 
   return (

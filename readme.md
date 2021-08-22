@@ -2,11 +2,9 @@
 
 Stadion has started its own Football club so that it can participate in some friendly matches with some well known clubs.
 
-Of course, you can't be a real football club unless you have your own native app, so we've decided to build our own.
-
-The exercise you'll be embarking on will implement a feature of the app.
-
-We'll explain what that is soon, but first we'll help you get your bearings by giving you a brief overview of the architecture of the application.
+- Of course, you can't be a real football club unless you have your own native app, so we've decided to build our own.
+- The exercise you'll be embarking on will implement a feature of the app.
+- We'll explain what that is soon, but first we'll help you get your bearings by giving you a brief overview of the architecture of the application.
 
 > **Note:**  you're about to be given a top level overview of the app structure as a whole. To give you a bit of context as to the scope of the exercise, the only files you'll be expected to work with are in the **fixtures** module. The specifics of this will follow.
 
@@ -48,7 +46,7 @@ The modules correspond pretty much one for one with the bottom tab navigation of
 Each module at a minimum has:
 
 - Some screens
-- Some componens
+- Some components
 - An `actions.ts` file that contains all the actions for a module.
 - A `reducer.ts` file that contains the reducer that handles the actions in the `actions.ts`
 - A `thunks.ts` file that contains asynchronous behaviours, such as fetching data from servers.
@@ -57,6 +55,29 @@ The only module currently in development is the **fixtures** module, and this is
 
 ## Your task
 
-A
+After setting up the project, as you've seen described above, the Stadion developer's priority task was to implement a list of upcoming fixtures. However, due to being promoted as Center Midfield in the Stadion FC team, the developer is now too busy focusing on their beep test score and now needs you to finish that task.
 
-## 
+- **The dev has already completed the following:**
+
+  - Created a `FixturesScreen.tsx` and plugged it into the router.
+  - Implemented a `useEffect` in that screen that calls a redux thunk, which in turn loads all the fixtures that Stadion are yet to play.
+  - Used some redux state selector hooks to pull in:
+    - A boolean called `fixturesLoading`, which indicates whether the API request to fetch the fixtures is currently in progress.
+    - An array of `Fixture` objects called `fixtures`, which contains all the data that the returned for the aforementioned API call.
+
+- **Your assigned task is to:**
+
+  - Show a loading indicator whilst the API call is in progress.
+
+  - When the loading is finished, display a list of "cards" that show all the results in the  `fixtures` variable.
+
+    - We've included a wireframe of what the card can look like below.
+      - All of the data displayed in the card is driven by each individual item in the `fixtures` array.
+
+  - The sort of approach you choose to render the list of results is up to you. It's good to know though that once Stadion FC wins time and time again, at some point in the future this list is going to grow to a substantial number of items, so render performance is worth considering.
+
+    
+
+
+
+![fixture](images/fixture.png)

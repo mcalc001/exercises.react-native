@@ -27,18 +27,19 @@ The general layout and bootstrapping of the application follows some fairly comm
 
 The file and folder structure, whilst not so big yet, has started to layout what could be considered a good foundation for modularisation and separation of concerns.
 
-| Path                     | Description                                                  |      |
-| ------------------------ | ------------------------------------------------------------ | ---- |
-| `./src`                  | Most of the app related source code resides in this directory. |      |
-| `./src/modules`          | This directory is the home for all the modules in the application. Modules contain all the UI and state concerns for a given "vertical" in the app. See more in the Modules section. |      |
-| `./src/modules/fixtures` | The **fixtures** module. Contains all code related to the fixtures section in the app. |      |
-| `./src/modules/home`     | The **home** module. Contains all code related to the fixtures section in the app. |      |
-| `./src/modules/profile`  | The **profile** module. Contains all code related to the fixtures section in the app. **** |      |
-| `./src/modules/store`    | The **store** module. Contains all code related to the fixtures section in the app |      |
-| `./src/core`             | Common code that the modules share.                          |      |
-| `./src/core/api`         | The aforementioned API and mock data is in this folder.      |      |
-| `./src/store`            | Setup code for redux.                                        |      |
-| `./src/types`            | Type declarations to extend Typescript.                      |      |
+| Path                     | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| `./src`                  | Most of the app related source code resides in this directory. |
+| `./src/modules`          | This directory is the home for all the modules in the application. Modules contain all the UI and state concerns for a given "vertical" in the app. See more in the Modules section. |
+| `./src/modules/fixtures` | The **fixtures** module. Contains all code related to the fixtures section in the app. |
+| `./src/modules/home`     | The **home** module. Contains all code related to the fixtures section in the app. |
+| `./src/modules/profile`  | The **profile** module. Contains all code related to the fixtures section in the app. **** |
+| `./src/modules/store`    | The **store** module. Contains all code related to the fixtures section in the app |
+| `./src/core`             | Common code that the modules share.                          |
+| `./src/core/api`         | The aforementioned API and mock data is in this folder.      |
+| `./src/core/components`  | This folder contains components that are shared or common to all the modules in the application. Typically, this only includes very generic components that aren't related to any one specific module. |
+| `./src/store`            | Setup code for redux.                                        |
+| `./src/types`            | Type declarations to extend Typescript.                      |
 
 ## Modules
 

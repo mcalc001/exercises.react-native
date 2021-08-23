@@ -99,6 +99,7 @@ In normal circumstances, your work would submitted as a PR. However in this case
 - [ ] Compress the entire project folder into a zip
 - [ ] Send your ZIP file through to the Stadion person who you've been in contact with.
 
+Of course, despite delivering the source directly to us, please git commit as much as you need / want to in order to complete the tasks.
 
 
 

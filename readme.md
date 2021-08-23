@@ -1,14 +1,22 @@
 # Stadion FC React Native app
 
-Stadion has started its own Football club so that it can participate in some friendly matches with some well known clubs.
+* [Stadion FC React Native app](#stadion-fc-react-native-app)
+* [App architecture](#app-architecture)
+   * [File Structure](#file-structure)
+   * [Modules](#modules)
+* [Your tasks](#your-tasks)
+   * [Task List](#task-list)
+   * [How to deliver your work back to us](#how-to-deliver-your-work-back-to-us)
 
-- Of course, you can't be a real football club unless you have your own native app, so we've decided to build our own.
-- The exercise you'll be embarking on will implement a feature of the app.
-- We'll explain what that is soon, but first we'll help you get your bearings by giving you a brief overview of the architecture of the application.
+Stadion has started its own Football club so that it can participate in some friendly matches with some well known clubs. Of course, you can't be a real football club unless you have your own native app, so we've decided to build our own.
+
+The exercise you'll be embarking on will implement a feature of the app.
+
+We'll explain what that is soon, but first we'll help you get your bearings by giving you a brief overview of the architecture of the application.
 
 > **Note:**  you're about to be given a top level overview of the app structure as a whole. To give you a bit of context as to the scope of the exercise, the only files you'll be expected to work with are in the **fixtures** module. The specifics of this will follow.
 
-## App architecture
+# App architecture
 
 A Stadion developer has already scaffolded the app out, and so far we have setup:
 
@@ -17,11 +25,11 @@ A Stadion developer has already scaffolded the app out, and so far we have setup
 - [Redux](https://redux.js.org) for state management
   - With [Typesafe actions](https://github.com/piotrwitek/typesafe-actions) for better typing support
 - [Styled Components](https://www.styled-components.com) for component building
-- A small API module which uses mock data for the time being and some timeouts to simulate loading latency.
+- A small API module which uses mock data and some timeouts to simulate loading latency.
 
 The general layout and bootstrapping of the application follows some fairly common patterns, so if you start navigating the code from `App.tsx`, you should hopefully find some familiarity with the structure.
 
-### File Structure
+## File Structure
 
 The file and folder structure, whilst not so big yet, has started to layout what could be considered a good foundation for modularisation and separation of concerns.
 
@@ -31,17 +39,17 @@ The file and folder structure, whilst not so big yet, has started to layout what
 | `./src/modules`          | This directory is the home for all the modules in the application. Modules contain all the UI and state concerns for a given "vertical" in the app. See more in the Modules section. |
 | `./src/modules/fixtures` | The **fixtures** module. Contains all code related to the fixtures section in the app. |
 | `./src/modules/home`     | The **home** module. Contains all code related to the fixtures section in the app. |
-| `./src/modules/profile`  | The **profile** module. Contains all code related to the fixtures section in the app. **** |
+| `./src/modules/profile`  | The **profile** module. Contains all code related to the fixtures section in the app. |
 | `./src/modules/store`    | The **store** module. Contains all code related to the fixtures section in the app |
 | `./src/core`             | Common code that the modules share.                          |
-| `./src/core/api`         | The aforementioned API and mock data is in this folder.      |
+| `./src/core/api`         | The API and mock data is in this folder.                     |
 | `./src/core/components`  | This folder contains components that are shared or common to all the modules in the application. Typically, this only includes very generic components that aren't related to any one specific module. |
-| `./src/store`            | Setup code for redux.                                        |
+| `./src/store`            | Scaffolding code for redux.                                  |
 | `./src/types`            | Type declarations to extend Typescript.                      |
 
 ## Modules
 
-The modules correspond pretty much one for one with the bottom tab navigation of the app.
+The modules correspond one for one with the tabs in the bottom tab navigation of the app.
 
 Each module at a minimum has:
 
@@ -53,31 +61,46 @@ Each module at a minimum has:
 
 The only module currently in development is the **fixtures** module, and this is the module within which you'll be working.
 
-## Your task
+# Your tasks
 
-After setting up the project, as you've seen described above, the Stadion developer's priority task was to implement a list of upcoming fixtures. However, due to being promoted as Center Midfield in the Stadion FC team, the developer is now too busy focusing on their beep test score and now needs you to finish that task.
+After setting up the basic layout of the project, the Stadion developer's next priority to implement a list of upcoming fixtures (i.e upcoming games).
 
-- **The dev has already completed the following:**
+However, after being promoted to Center Midfield in the Stadion FC team, the developer now needs you to finish that task.
 
-  - Created a `FixturesScreen.tsx` and plugged it into the router.
-  - Implemented a `useEffect` in that screen that calls a redux thunk, which in turn loads all the fixtures that Stadion are yet to play.
-  - Used some redux state selector hooks to pull in:
-    - A boolean called `fixturesLoading`, which indicates whether the API request to fetch the fixtures is currently in progress.
-    - An array of `Fixture` objects called `fixtures`, which contains all the data that the returned for the aforementioned API call.
+**The dev has already completed the following:**
 
-- **Your assigned task is to:**
+- Created a `FixturesScreen.tsx` and plugged it into the router.
+- Implemented a `useEffect` in that screen that calls a redux thunk, which in turn loads all the fixtures that Stadion are yet to play.
+- Used some redux state selector hooks to pull in:
+  - A boolean called `fixturesLoading`, which indicates whether the API request to fetch the fixtures is currently in progress.
+  - An array of `Fixture` objects called `fixtures`, which contains all the data that the returned for the aforementioned API call.
 
-  - Show a loading indicator whilst the API call is in progress.
+## Task List
 
-  - When the loading is finished, display a list of "cards" that show all the results in the  `fixtures` variable.
+- [ ] Clone this repository
+- [ ] Show a simple loading indicator whilst the API call is in progress.
+- [ ] When the loading is finished, display a list of "cards" that show all the results that are in the  `fixtures` variable.
 
-    - We've included a wireframe of what the card can look like below.
-      - All of the data displayed in the card is driven by each individual item in the `fixtures` array.
+  - We've included a wireframe of what the card can look like below.	
+- [ ] All of the data displayed in the card is driven by each individual item in the `fixtures` array.
+  - [ ] We've console logged out the data in the screen so that you can see what it looks like.
+- [ ] Run `yarn tsc` to check for and fix any typing issues.
+- [ ] Run `yarn lint` to check for and fix any linting issues.
 
-  - The sort of approach you choose to render the list of results is up to you. It's good to know though that once Stadion FC wins time and time again, at some point in the future this list is going to grow to a substantial number of items, so render performance is worth considering.
-
-    
-
-
+The approach you choose to render the list of results is up to you, though it's worth considering that at some point soon the amount of data will grow so it's worth considering rendering performance up front.
 
 ![fixture](images/fixture.png)
+
+## How to deliver your work back to us
+
+In normal circumstances, your work would submitted as a PR. However in this case, we'd like you to submit your work to us using the following steps:
+
+- [ ] Delete the `node_modules` folder completely
+- [ ] Compress the entire project folder into a zip
+- [ ] Send your ZIP file through to the Stadion person who you've been in contact with.
+
+
+
+
+
+![image-20210823110412694](images/image-20210823110412694.png)

@@ -22,16 +22,16 @@ export const fixtureMocks: Fixture[] = [
     dateTime: getFutureDateString(7),
     awayClub: stadionFC,
     homeClub: {
-      name: 'Manchester City',
-      logo: 'https://logodownload.org/wp-content/uploads/2017/02/manchester-city-fc-logo-escudo-badge.png'
+      name: 'Olympique Lyonnais',
+      logo: 'https://psg-dev.stadion.io/media/2381/olympique_lyonnais.png?format=png8'
     },
     competition: competitionMocks[0]
   },
   {
     dateTime: getFutureDateString(14),
     awayClub: {
-      name: 'Paris Saint-Germain',
-      logo: 'https://image.pngaaa.com/245/4759245-middle.png'
+      name: 'Montpellier Hérault',
+      logo: 'https://psg-dev.stadion.io/media/2377/montpellier.png?format=png8'
     },
     homeClub: stadionFC,
     competition: competitionMocks[0]
@@ -40,8 +40,8 @@ export const fixtureMocks: Fixture[] = [
     dateTime: getFutureDateString(14),
     awayClub: stadionFC,
     homeClub: {
-      name: 'Rangers',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Rangers_FC_Logo.png'
+      name: 'Lille OSC',
+      logo: 'https://psg-dev.stadion.io/media/14360/losc.png?format=png8'
     },
     competition: competitionMocks[0]
   }

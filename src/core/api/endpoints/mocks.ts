@@ -19,6 +19,7 @@ const stadionFC: Club = {
 
 export const fixtureMocks: Fixture[] = [
   {
+    id: '1',
     dateTime: getFutureDateString(7),
     awayClub: stadionFC,
     homeClub: {
@@ -28,6 +29,7 @@ export const fixtureMocks: Fixture[] = [
     competition: competitionMocks[0]
   },
   {
+    id: '2',
     dateTime: getFutureDateString(14),
     awayClub: {
       name: 'Montpellier Hérault',
@@ -37,6 +39,7 @@ export const fixtureMocks: Fixture[] = [
     competition: competitionMocks[0]
   },
   {
+    id: '3',
     dateTime: getFutureDateString(14),
     awayClub: stadionFC,
     homeClub: {

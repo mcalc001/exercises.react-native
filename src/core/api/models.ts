@@ -9,6 +9,10 @@ export interface Competition {
 
 export interface Fixture {
   /**
+   * Unique id of the fixture
+   */
+  id: string;
+  /**
    * The date and time of kick off, in UTC
    */
   dateTime: string;

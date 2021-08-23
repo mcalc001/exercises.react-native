@@ -61,6 +61,30 @@ Each module at a minimum has:
 
 The only module currently in development is the **fixtures** module, and this is the module within which you'll be working.
 
+# Building and running the app
+
+It's expected that you already are familiar with React Native, and have had it running locally on your machine before. If you need some guidance with this however, you can check [their docs here](https://reactnative.dev/docs/environment-setup).
+
+**Note: This application is not using Expo, it's a basic React Native CLI application.**
+
+From the root of the directory:
+
+```
+// Install the dependencies
+yarn
+
+// Run in iOS simulator (macOS only)
+npx react-native run-ios 
+
+// Run in Android emulator (Android only)
+npx react-native run-android
+```
+
+### Troubleshooting 
+
+- In some Android emulators, you may see a mesage like "System UI stopped working". It generally can be dismissed and ignored.
+- If you have any issues that prevent you from running the app, please don't hesitate to reach out to your Stadion contact and a someone will help you resolve the issue.
+
 # Your tasks
 
 After setting up the basic layout of the project, the Stadion developer's next priority was to implement a list of upcoming fixtures (i.e upcoming games).

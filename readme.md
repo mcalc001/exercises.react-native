@@ -119,7 +119,7 @@ The approach you choose to render the list of results is up to you, though it's 
 
 ## How to deliver your work back to us
 
-In normal circumstances, your work would submitted as a PR. However in this case, we'd like you to submit your work to us using the following steps:
+In normal circumstances, your work would be submitted as a PR. However in this case, we'd like you to submit your work to us using the following steps:
 
 - [ ] Delete the `node_modules` folder completely
 - [ ] Compress the entire project folder into a zip

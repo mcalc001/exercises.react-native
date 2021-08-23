@@ -5,7 +5,7 @@
    * [File Structure](#file-structure)
    * [Modules](#modules)
 * [Building and running the app](#building-and-running-the-app)
-      * [Troubleshooting](#troubleshooting)
+   * [Troubleshooting](#troubleshooting)
 * [Your tasks](#your-tasks)
    * [Task List](#task-list)
    * [How to deliver your work back to us](#how-to-deliver-your-work-back-to-us)

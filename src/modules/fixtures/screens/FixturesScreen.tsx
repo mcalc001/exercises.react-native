@@ -6,7 +6,7 @@ import { getFixturesAsync } from '../thunks';
 
 export default () => {
   const fixturesLoading = useStateSelector(u => u.fixtures.fixturesLoading);
-  const fixtures = useStateSelector(u => u.fixtures);
+  const fixtures = useStateSelector(u => u.fixtures.fixtures);
   const dispatch = useThunkDispatch();
 
   useEffect(() => {

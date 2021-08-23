@@ -81,7 +81,7 @@ However, after being promoted to Center Midfield in the Stadion FC team, the dev
 - [ ] **Display a simple loading indicator** whilst the data is being loaded
   - We have added a mocked 3 second timeout to simulate network latency.
 - [ ] **Display a list of "cards"** that show all the results that are in the  `fixtures` variable.
-	- We've included a wireframe of what the card can look like below. Use this as a guide, but you don't have to make it look exactly the same if you don't want to.
+	- We've included a wireframe image of what the card can look like below in this readme. Use this as a guide, but you don't have to make it look exactly the same if you don't want to.
   - All of the data displayed in the card (team logo, name, date, time, competition name) is available from the fixture items in the array.
   - We've console logged out the data in the screen so that you can see what it looks like, but you can also reference the `Fixture` Typescript interface as well.
 - [ ] Run `yarn tsc` to check for and fix any typing issues.

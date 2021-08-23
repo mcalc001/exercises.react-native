@@ -1,9 +1,9 @@
 import { Club, Competition, Fixture } from '../models';
-var d = new Date();
-var now = d.getUTCDate();
 
 const getFutureDateString = (plusDays: number) => {
-  return new Date().setDate(now + plusDays).toString();
+  var now = new Date();
+  now.setDate(now.getDate() + plusDays);
+  return now.toUTCString();
 };
 
 export const competitionMocks: Competition[] = [
@@ -40,7 +40,7 @@ export const fixtureMocks: Fixture[] = [
   },
   {
     id: '3',
-    dateTime: getFutureDateString(14),
+    dateTime: getFutureDateString(21),
     awayClub: stadionFC,
     homeClub: {
       name: 'Lille OSC',

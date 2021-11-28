@@ -21,7 +21,7 @@ const create = (): NewsArticle => {
 
 export const newsMocks: NewsArticle[] = [];
 
-for (var i = 0; i < 3000; i++) {
+for (var i = 0; i < 2000; i++) {
   newsMocks.push(create());
 }
 

@@ -25,6 +25,6 @@ However, after being promoted to Center Midfield in the Stadion FC team, the dev
 
 The approach you choose to render the list of results is up to you, though it's worth considering that at some point soon the amount of data will grow so it's worth considering rendering performance up front.
 
-![fixture](/Users/chrispaynter/Development/stadion/exercises.react-native/fixture.png)
+![fixture](./fixture.png)
 
-![image-20210823110412694](/Users/chrispaynter/Development/stadion/exercises.react-native/image-20210823110412694.png)
+![image-20210823110412694](./image-20210823110412694.png)

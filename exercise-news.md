@@ -58,7 +58,7 @@ Only do this task if you have finished the above in a reasonable amount of time 
 
 This is the design for the news articles cards. Follow it from a structural perspective, but you're also welcome to get creative with it if you wish to (though this is not mandatory).
 
-![article-card](/Users/chrispaynter/Development/stadion/exercises.react-native/article-card.png)
+![article-card](./article-card.png)
 
 
 
@@ -66,4 +66,4 @@ This is the design for the news articles cards. Follow it from a structural pers
 
 
 
-![image-20211128111842815](/Users/chrispaynter/Development/stadion/exercises.react-native/image-20211128111842815.png)
+![image-20211128111842815](./image-20211128111842815.png)

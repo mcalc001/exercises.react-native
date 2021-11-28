@@ -1,5 +1,5 @@
 import { Fixture } from '../models';
-import { fixtureMocks } from './mocks';
+import { fixtureMocks } from './fixtures.mocks';
 
 export const get = (): Promise<Fixture[]> => {
   return new Promise(resolve => {

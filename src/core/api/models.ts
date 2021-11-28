@@ -32,3 +32,11 @@ export interface Fixture {
    */
   competition: Competition;
 }
+
+export interface NewsArticle {
+  id: string;
+  dateTime: string;
+  title: string;
+  description: string;
+  image: string;
+}

@@ -108,7 +108,3 @@ In normal circumstances, your work would be submitted as a PR. However in this c
 
 Of course, despite the fact that you're simply delivering the source files directly to us, feel free to commit to your local version of the repository as much as you need/want to.
 
-
-
-
-![image-20210823110412694](images/image-20210823110412694.png)

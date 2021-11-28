@@ -7,7 +7,7 @@ export interface SearchRequest {
 }
 
 export interface SearchResponse<T> {
-  page: number;
+  page: number; // Starts at 0
   pageSize: number;
   results: T[];
 }

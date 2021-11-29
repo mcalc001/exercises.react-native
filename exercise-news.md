@@ -1,5 +1,7 @@
 # Exercise - News Feed
 
+> Before reading this, you should check out the [primary readme](./readme.md) for the repo to get an overview of architecture, how to get the project running, as well as instructions on how to deliver your work.
+
 After setting up the basic layout of the project, one of the Stadion developer's next priorities was to implement a list of news content on the home screen (the tab "Stadion FC").
 
 However, after being promoted to Center Midfield in the Stadion FC team, the developer now needs you to finish that task.

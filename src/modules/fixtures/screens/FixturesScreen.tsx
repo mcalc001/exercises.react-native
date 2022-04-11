@@ -1,8 +1,17 @@
-import React, { useEffect } from 'react';
-import { Text } from 'react-native';
-import ScreenWrapper from '../../../components/ScreenWrapper';
+import React, { useCallback, useEffect } from 'react';
+import {
+  ActivityIndicator,
+  FlatList,
+  ListRenderItemInfo,
+  View
+} from 'react-native';
+import { BASE_SIZE } from '../../../config/Styles';
+import { Fixture } from '../../../core/api/models';
 import { useStateSelector, useThunkDispatch } from '../../../core/redux/hooks';
+import { FixtureResultCard } from '../components/FixtureResultCard/FixtureResultCard';
+import { FIXTURE_RESULT_HEIGHT } from '../components/FixtureResultCard/FixtureResultCard.styles';
 import { getFixturesAsync } from '../thunks';
+import { styles } from './FixturesScreen.styles';
 
 export default () => {
   const fixturesLoading = useStateSelector(u => u.fixtures.fixturesLoading);
@@ -15,12 +24,38 @@ export default () => {
     dispatch(getFixturesAsync());
   }, [dispatch]);
 
-  console.log('loading', fixturesLoading);
-  console.log('fixtures', fixtures);
+  const renderItem = useCallback(
+    ({ item }: ListRenderItemInfo<Fixture>) => <FixtureResultCard {...item} />,
+    []
+  );
+
+  const renderHeader = useCallback(
+    () => <View style={{ height: BASE_SIZE * 2 }} />,
+    []
+  );
+
+  const getItemLayout = useCallback((data: Fixture[] | any, index: number) => {
+    return {
+      length: FIXTURE_RESULT_HEIGHT,
+      offset: FIXTURE_RESULT_HEIGHT * data?.length,
+      index
+    };
+  }, []);
 
   return (
-    <ScreenWrapper>
-      <Text>This is the screen you'll work on</Text>
-    </ScreenWrapper>
+    <View style={styles.container}>
+      {fixturesLoading ? (
+        <ActivityIndicator size={'large'} />
+      ) : (
+        <FlatList
+          style={styles.flatList}
+          ListHeaderComponent={renderHeader}
+          data={fixtures}
+          renderItem={renderItem}
+          getItemLayout={getItemLayout}
+          keyExtractor={item => item.id}
+        />
+      )}
+    </View>
   );
 };

@@ -12,18 +12,22 @@ import { NewsArticle } from '../../../core/api/models';
 import { useStateSelector, useThunkDispatch } from '../../../core/redux/hooks';
 import { NewsArticleCard } from '../components/NewsArticleCard';
 import { NEWS_ARTICLE_HEIGHT } from '../components/NewsArticleCard.styles';
-import { getNewsArticlesAsync } from '../thunks';
+import { getNewsArticlesAsync, refreshNewsArticlesAsync } from '../thunks';
 import { styles } from './HomeScreen.styles';
 
-const PAGE_SIZE = 7;
+const PAGE_SIZE = 10;
 
 export default () => {
   const newsArticlesLoading = useStateSelector(
     u => u.newsArticles.newsArticlesLoading
   );
+  const newsArticlesRefreshing = useStateSelector(
+    u => u.newsArticles.newsArticlesRefreshing
+  );
   const newsArticles = useStateSelector(u => u.newsArticles.newsArticles);
-  const dispatch = useThunkDispatch();
   const dataSetComplete = useStateSelector(u => u.newsArticles.dataSetComplete);
+
+  const dispatch = useThunkDispatch();
 
   const page = useRef(0);
 
@@ -83,6 +87,11 @@ export default () => {
     }
   }, [newsArticlesLoading]);
 
+  const onRefreshHandler = () => {
+    page.current = 0;
+    dispatch(refreshNewsArticlesAsync(PAGE_SIZE));
+  };
+
   return (
     <View style={styles.container}>
       {loader()}
@@ -96,7 +105,9 @@ export default () => {
         getItemLayout={getItemLayout}
         keyExtractor={item => item.id}
         onEndReached={onEndReached}
-        onEndReachedThreshold={0.3}
+        onEndReachedThreshold={1.5}
+        onRefresh={onRefreshHandler}
+        refreshing={newsArticlesRefreshing}
       />
     </View>
   );

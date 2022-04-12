@@ -16,7 +16,8 @@ export const get = (request: SearchRequest): Promise<NewsArticle[]> => {
   return new Promise(resolve => {
     setTimeout(() => {
       const startIndex = request.page * request.pageSize;
-      const range = newsMocks.slice(startIndex, request.pageSize);
+      const range = newsMocks.slice(startIndex, startIndex + request.pageSize); // ;)
+      console.log(range.length);
       resolve(range);
     }, 500);
   });

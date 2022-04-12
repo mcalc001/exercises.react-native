@@ -1,7 +1,7 @@
 import { Platform } from 'react-native';
 import { Colors } from './Colors';
 
-export const BASE_SIZE = 8;
+export const BASE_SIZE = 6;
 export const GBR = 8; // global border radius
 
 export const AppStyles = {

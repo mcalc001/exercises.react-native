@@ -18,9 +18,6 @@ export const Colors = {
     grey: GREY_ALTO,
     lightGrey: GREY_PALE_SKY,
     silver: GREY_ROLLING_STONE,
-    white: WHITE,
-    transparent: 'transparent',
-    blue: BLUE_TIMBER,
-    rnLightGrey: LIGHT_GREY
+    white: WHITE
   }
 };

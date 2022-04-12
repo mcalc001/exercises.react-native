@@ -2,7 +2,7 @@ import moment from 'moment';
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
-import { NewsArticle } from '../../../core/api/models';
+import { NewsArticle } from '../../../../core/api/models';
 import { styles } from './NewsArticleCard.styles';
 
 export interface INewsArticleCardProps {

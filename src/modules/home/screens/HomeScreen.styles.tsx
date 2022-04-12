@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { BASE_SIZE } from '../../../config/Styles';
+import { BASE_SIZE } from '../../../config';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   flatList: {
     marginHorizontal: BASE_SIZE * 2
   },
-  loading: {
+  loadingContainer: {
     zIndex: 1,
     position: 'absolute',
     left: 0,

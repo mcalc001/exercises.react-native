@@ -5,10 +5,10 @@ import {
   ListRenderItemInfo,
   View
 } from 'react-native';
-import { BASE_SIZE } from '../../../config/Styles';
+import { BASE_SIZE } from '../../../config';
 import { Fixture } from '../../../core/api/models';
 import { useStateSelector, useThunkDispatch } from '../../../core/redux/hooks';
-import { FixtureResultCard } from '../components/FixtureResultCard/FixtureResultCard';
+import { FixtureResultCard } from '../components';
 import { FIXTURE_RESULT_HEIGHT } from '../components/FixtureResultCard/FixtureResultCard.styles';
 import { getFixturesAsync } from '../thunks';
 import { styles } from './FixturesScreen.styles';

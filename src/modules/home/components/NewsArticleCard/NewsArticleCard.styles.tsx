@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from '../../../config/Colors';
-import { BASE_SIZE, GBR } from '../../../config/Styles';
+import { BASE_SIZE, Colors, GBR } from '../../../../config';
 
 export const NEWS_ARTICLE_HEIGHT = 308;
 

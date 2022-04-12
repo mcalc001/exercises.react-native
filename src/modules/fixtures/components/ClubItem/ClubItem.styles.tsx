@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
-import { BASE_SIZE } from '../../../../config/Styles';
+import { BASE_SIZE } from '../../../../config';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignContent: 'center'
+    alignContent: 'center',
+    marginTop: BASE_SIZE
   },
   image: {
     borderRadius: 100,

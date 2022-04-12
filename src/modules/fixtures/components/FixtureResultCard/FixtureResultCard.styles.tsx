@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from '../../../../config/Colors';
-import { BASE_SIZE, GBR } from '../../../../config/Styles';
+import { BASE_SIZE, GBR, Colors } from '../../../../config';
 
 export const FIXTURE_RESULT_HEIGHT = 156; // fixed height of item component
 
@@ -15,12 +14,12 @@ export const styles = StyleSheet.create({
     borderRadius: GBR
   },
   centerContainer: {
-    marginHorizontal: BASE_SIZE / 2
+    marginHorizontal: BASE_SIZE
   },
   competitionName: {
     textAlign: 'center',
-    paddingBottom: BASE_SIZE * 2,
-    fontSize: 12
+    paddingBottom: BASE_SIZE * 4,
+    fontSize: 13
   },
   date: {
     paddingBottom: BASE_SIZE * 1.5,

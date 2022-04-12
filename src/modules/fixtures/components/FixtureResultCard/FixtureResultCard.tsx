@@ -2,7 +2,7 @@ import moment from 'moment';
 import React from 'react';
 import { Text, View } from 'react-native';
 import { Fixture } from '../../../../core/api/models';
-import { ClubItem } from '../ClubItem/ClubItem';
+import { ClubItem } from '../ClubItem';
 import { styles } from './FixtureResultCard.styles';
 
 export const FixtureResultCard: React.FC<Fixture> = ({

@@ -4,14 +4,13 @@ import {
   Alert,
   FlatList,
   ListRenderItemInfo,
-  Text,
   View
 } from 'react-native';
-import { BASE_SIZE } from '../../../config/Styles';
+import { BASE_SIZE } from '../../../config';
 import { NewsArticle } from '../../../core/api/models';
 import { useStateSelector, useThunkDispatch } from '../../../core/redux/hooks';
-import { NewsArticleCard } from '../components/NewsArticleCard';
-import { NEWS_ARTICLE_HEIGHT } from '../components/NewsArticleCard.styles';
+import { NewsArticleCard } from '../components';
+import { NEWS_ARTICLE_HEIGHT } from '../components/NewsArticleCard/NewsArticleCard.styles';
 import { getNewsArticlesAsync, refreshNewsArticlesAsync } from '../thunks';
 import { styles } from './HomeScreen.styles';
 
@@ -39,18 +38,21 @@ export default () => {
   );
 
   useEffect(() => {
+    /**
+     * Dispatch action first load to get newsArticles array.
+     */
     getData(page.current);
   }, [getData]);
 
-  const onArticlePress = (id: string) => {
+  const onArticlePress = useCallback((id: string) => {
     Alert.alert('id:', id);
-  };
+  }, []);
 
   const renderItem = useCallback(
     ({ item }: ListRenderItemInfo<NewsArticle>) => (
       <NewsArticleCard article={item} onPress={onArticlePress} />
     ),
-    []
+    [onArticlePress]
   );
 
   const renderHeader = useCallback(
@@ -58,6 +60,9 @@ export default () => {
     []
   );
 
+  /**
+   * measure renderItem for performance enhancements
+   */
   const getItemLayout = useCallback(
     (data: NewsArticle[] | any, index: number) => {
       return {
@@ -69,6 +74,12 @@ export default () => {
     []
   );
 
+  /**
+   * when user reaches end of ListView
+   * return if dataSetComplete
+   * else increment local page number
+   * dispatch action to newsArticles with updated page num
+   */
   const onEndReached = useCallback(() => {
     if (dataSetComplete) {
       return;
@@ -77,16 +88,23 @@ export default () => {
     getData(page.current);
   }, [dataSetComplete, page, getData]);
 
+  /**
+   * Loader to only show on initial load
+   */
   const loader = useCallback(() => {
     if (newsArticlesLoading && page.current === 0) {
       return (
-        <View style={styles.loading}>
+        <View style={styles.loadingContainer}>
           <ActivityIndicator size={'large'} />
         </View>
       );
     }
   }, [newsArticlesLoading]);
 
+  /**
+   * when user pulls to refresh
+   * dispatch action to grab new data clear and current newsArticle array
+   */
   const onRefreshHandler = () => {
     page.current = 0;
     dispatch(refreshNewsArticlesAsync(PAGE_SIZE));
@@ -105,7 +123,7 @@ export default () => {
         getItemLayout={getItemLayout}
         keyExtractor={item => item.id}
         onEndReached={onEndReached}
-        onEndReachedThreshold={1.5}
+        onEndReachedThreshold={2}
         onRefresh={onRefreshHandler}
         refreshing={newsArticlesRefreshing}
       />
